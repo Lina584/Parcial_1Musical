@@ -209,6 +209,8 @@ La sala musical hace parte de una propuesta de **casa domótica**, en la cual di
 En este caso, la automatización se aplica al área musical, permitiendo controlar instrumentos mediante comandos y generar diferentes acciones de manera automática.
 
 ---
+## Video de funcionamiento
+[Ver el video en Youtube](https://youtu.be/8uXLc7dYh_g)
 
 
 ##  Autora
