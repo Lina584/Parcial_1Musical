@@ -87,7 +87,7 @@ Toca el bombo
 Toca el redoblante
 Toca el xilofono
 Toca la bateria
-Toca el comando completo
+Toca todo
 AYUDA
 ```
 
@@ -117,7 +117,7 @@ La batería ejecuta un patrón compuesto por:
 BOMBO → REDOBLANTE → BOMBO → BOMBO → REDOBLANTE
 ```
 
-### Canción completa
+### Comandos completos
 
 También existe un modo que combina los dos instrumentos:
 
