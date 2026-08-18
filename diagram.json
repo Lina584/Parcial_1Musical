@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -124.8, "left": -43.16, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": -64.06,
+      "left": 134.63,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 257.2, "left": -230.4, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo2", "top": 190, "left": 201.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo3", "top": 353.2, "left": -134.4, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo4", "top": 449.2, "left": 76.8, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo5", "top": 343.6, "left": 268.8, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo6", "top": 103.6, "left": 489.6, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": 29.56, "left": -278.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 528, "left": -231, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "servo1:V+", "vcc1:VCC", "green", [ "h0" ] ],
+    [ "servo3:V+", "vcc1:VCC", "green", [ "h-144", "v-355.1" ] ],
+    [ "servo2:V+", "vcc1:VCC", "green", [ "h-384", "v-182.3" ] ],
+    [ "servo4:V+", "vcc1:VCC", "green", [ "h-28.8", "v-201.5", "h-278.4", "v-172.8" ] ],
+    [
+      "servo5:V+",
+      "vcc1:VCC",
+      "green",
+      [ "h-67.2", "v-86.3", "h-134.4", "v-115.2", "h-268.8", "v-144" ]
+    ],
+    [ "servo6:V+", "vcc1:VCC", "green", [ "h-230.4", "v-38.3", "h-268.8", "v-115.2", "h-105.6" ] ],
+    [ "servo1:GND", "gnd1:GND", "black", [ "h-28.8", "v124.8", "h38.4" ] ],
+    [ "servo3:GND", "gnd1:GND", "black", [ "h0" ] ],
+    [ "servo4:GND", "gnd1:GND", "black", [ "h0" ] ],
+    [ "servo2:GND", "gnd1:GND", "black", [ "h-144", "v288" ] ],
+    [ "servo5:GND", "gnd1:GND", "black", [ "h-9.6", "v96", "h-422.4" ] ],
+    [ "servo6:GND", "gnd1:GND", "black", [ "h0", "v326.4" ] ],
+    [ "oled1:SDA", "esp:21", "green", [ "v-28.8", "h-115.13", "v48" ] ],
+    [ "oled1:SCL", "esp:22", "green", [ "v0" ] ],
+    [ "oled1:GND", "esp:GND.1", "black", [ "v-9.6", "h-105.6", "v163.2", "h-124.8", "v-67.2" ] ],
+    [ "oled1:VCC", "esp:3V3", "red", [ "v-76.8", "h-239.85", "v38.4" ] ],
+    [ "servo1:PWM", "esp:13", "blue", [ "h-9.6", "v-220.6", "h172.8", "v-57.6", "h0", "v-9.6" ] ],
+    [ "servo3:PWM", "esp:14", "blue", [ "h-19.2", "v-76.6", "h67.2", "v-345.6", "h9.6" ] ],
+    [ "servo4:PWM", "esp:27", "blue", [ "h0", "v-326.2", "h-192", "v-96", "h0", "v-48" ] ],
+    [ "servo5:PWM", "esp:26", "blue", [ "h-134.4", "v-268.6", "h-230.4", "v-153.6" ] ],
+    [
+      "servo2:PWM",
+      "esp:25",
+      "blue",
+      [ "h-9.6", "v-172.6", "h96", "v-240", "h-374.4", "v124.8" ]
+    ],
+    [ "servo6:PWM", "esp:33", "blue", [ "h-163.2", "v-355", "h-432", "v153.6" ] ]
+  ],
+  "dependencies": {}
+}
